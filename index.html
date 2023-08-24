@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Style to hide increment and decrement buttons in number input */
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        appearance: none;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>The Library</h1>
+      </header>
+      <section>
+        <!-- Trigger/Open The Modal -->
+        <button id="add-book-btn">+ ADD BOOK</button>
+
+        <!-- The Modal -->
+        <div id="form-modal" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="form">
+              <h1>ADD A BOOK</h1>
+              <label for="">
+                Title:
+                <input class="input" type="text" name="" id="title" required/>
+                <p id="error-msg"></p>
+              </label>
+              <label for="">
+                Author:
+                <input class="input" type="text" name="" id="author" required />
+              </label>
+              <label for="">
+                No. of pages:
+                <input class="input" type="number" name="" id="pages" required />
+              </label>
+              <label for="is-read">
+                Have you read?
+                <select id="read" required>
+                  <option value="">Select an option</option>
+                  <option value="Read">Read</option>
+                  <option value="Not Read">Not Read</option>
+                </select>
+              </label>
+              <input id="submit" type="submit" value="SUBMIT" />
+            </form>
+          </div>
+        </div>
+
+        <div id="bookList"></div>
+      </section>
+      <footer>
+        <p>
+          All Rights Reserved. Coded by
+          <a href="https://www.github.com/msveelin">Vanessa Linus</a>
+        </p>
+      </footer>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
